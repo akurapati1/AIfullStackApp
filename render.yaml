@@ -1,0 +1,16 @@
+# Render Blueprint - free tier. Deploy: https://render.com/deploy?repo=https://github.com/akurapati1/AIfullStackApp
+services:
+  - type: web
+    name: ai-fullstack-app
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: LLM_PROVIDER       # "echo" works with no key; use "openai-compatible" for a real model
+        value: echo
+      - key: LLM_BASE_URL       # e.g. https://api.groq.com/openai/v1 (Groq has a free tier)
+        value: https://api.groq.com/openai/v1
+      - key: LLM_MODEL
+        value: llama-3.1-8b-instant
+      - key: LLM_API_KEY        # only needed when LLM_PROVIDER=openai-compatible
+        sync: false
