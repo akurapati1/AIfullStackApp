@@ -40,6 +40,15 @@ LLM_MODEL=llama-3.1-8b-instant
 docker compose up --build
 ```
 
+## Deploy for free
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/akurapati1/AIfullStackApp)
+
+1. Click the button and sign in with GitHub - the included `render.yaml` creates a **free** web service (no card needed).
+2. It starts in offline `echo` mode. For real answers set `LLM_PROVIDER=openai-compatible` and `LLM_API_KEY` (a free [Groq](https://console.groq.com) key works with the default base URL and model) in the Render dashboard.
+3. Open the generated `*.onrender.com` URL.
+
+Notes: free services sleep when idle (first request is slow) and the disk is ephemeral, so chat history resets on each deploy/restart.
+
 ## API
 | Method | Path | Description |
 |---|---|---|
