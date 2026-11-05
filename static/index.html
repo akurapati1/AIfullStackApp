@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIfullStackApp</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <aside id="sidebar">
+    <button id="new-chat">+ New chat</button>
+    <ul id="conversations"></ul>
+    <p id="provider" class="muted"></p>
+  </aside>
+  <main>
+    <div id="messages" aria-live="polite"></div>
+    <form id="composer">
+      <textarea id="input" rows="2" placeholder="Ask anything…" required></textarea>
+      <button type="submit" id="send">Send</button>
+    </form>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
